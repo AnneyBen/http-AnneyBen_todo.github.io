@@ -31,15 +31,14 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 100px;
-  position: relative;
 }
 .section-todo__block {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
 }
 .section-todo__container-input {
-  max-width: 1000px;
   width: 100%;
   padding: 5px 10px;
   background-color: #e0e0e0;
@@ -63,7 +62,7 @@ body {
   width: 100%;
   background-color: transparent;
   border: none;
-  font-family: 'OpenSans-bold';
+  font-family: 'OpenSans-bold', 'Helvetica Neue', sans-serif;
   font-size: 20px;
   line-height: 24px;
 }
@@ -102,7 +101,7 @@ body {
   width: 100%;
   margin-left: 27px;
   border: none;
-  font-family: 'OpenSans-regular';
+  font-family: 'OpenSans-regular', 'Helvetica Neue', sans-serif;
   font-size: 20px;
   line-height: 24px;
 }
@@ -160,12 +159,28 @@ body {
   position: absolute;
   width: 90px;
   top: 0;
-  right: 4px;
+  right: -94px;
+  padding: 0;
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: #e0e0e0;
   border: 1px solid #808080;
-  font-family: 'OpenSans-bold';
+  font-family: 'OpenSans-bold', 'Helvetica Neue', sans-serif;
   font-size: 22px;
   line-height: 24px;
+}
+@media (max-width: 425px) {
+  .section-todo {
+    padding: 0 25px;
+  }
+  .section-todo__block {
+    padding-bottom: 150px;
+  }
+  .section-todo__button {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }
