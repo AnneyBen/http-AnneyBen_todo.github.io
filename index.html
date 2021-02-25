@@ -36,8 +36,48 @@
                 </div>
             </div>
             <button class="section-todo__button">Publish</button>
+
+            
+            <button class="section-todo__accordion" name = "fold_rec">Показать ссылки</button>
+
+            <div class="section-todo__panel" name = "rec_panel"></div>
         </div>
-        
+
+    <script>
+    var acc = document.getElementsByName("fold_rec");
+    var i;
+
+    var folded = false;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+
+        this.innerHTML = folded ? "Показать ссылки" : "Скрыть ссылки";
+
+        folded = !folded;
+
+        var panels = document.getElementsByName("rec_panel");
+
+        for (i = 0; i <script panels.length; i++) {
+
+        if (panels[i].style.maxHeight) {
+          panels[i].style.maxHeight = null;
+          panels[i].style.marginBottom = null;
+          panels[i].style.marginTop = null;
+          panels[i].style.opacity = null;
+
+        } else {
+          panels[i].style.maxHeight = (panels[i].scrollHeight*3) + "px";
+          panels[i].style.marginBottom = 0 + "em";
+          panels[i].style.marginTop = 0.1 + "em";
+          panels[i].style.opacity = "inherit";
+        } 
+      }
+      });
+    }
+    </script>
     </section>
 </body>
 </html>

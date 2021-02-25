@@ -162,8 +162,6 @@ body{
     transform: rotate(90deg);
 }
 
-
-
 .section-todo__button{
     display: block;
     position: absolute;
@@ -180,7 +178,32 @@ body{
     .font(22px, 24px);
 }
 
+.section-todo__accordion{
+    display: block;
+    .pama();
+    width: 100%;
+    margin-top: 100px;
+    padding: 0px 15px;
+    padding-bottom: 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid @font-fourth;
 
+    text-align: left;
+    color: rgba(0, 0, 0, 0.3);
+
+    .open-reg();
+    .font(20px, 24px);
+}
+
+.section-todo__pane{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-bottom: 0px;
+    transition: 0.5s ease-in-out;
+    transition-property: max-height, margin-bottom, margin-top, opacity;
+}
 
 
 
