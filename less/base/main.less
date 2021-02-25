@@ -1,0 +1,187 @@
+@import url("less/help/mixins.less");
+@import url("less/help/vars.less");
+
+body{
+    .pama();
+    padding-top: 100px;
+}
+
+.section-todo{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 100px;
+    position: relative;
+
+}
+
+.section-todo__block{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-todo__container-input{
+    max-width: 1000px;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: @font-third;
+    border: 1px solid @font-fourth;
+    margin-bottom: 50px;
+
+    position: relative;
+}
+
+.section-todo__container-input::after{
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: @font-fourth;
+}
+
+.section-todo__input-title{
+    .pama();
+    width: 100%;
+    background-color: transparent;
+    border: none;
+
+    font-family: 'OpenSans-bold';
+    .font(20px, 24px);
+}
+
+.section-todo__element{
+    max-width: 1000px;
+    width: 100%;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: @font-third;
+    border: 1px solid @font-fourth;
+
+    margin-top: 15px;
+    position: relative;
+}
+
+.section-todo__input-task-checkbox{
+    display: none;
+}
+
+.section-todo__label{
+    position: absolute;
+    top: 9px;
+    left: 14px;
+
+    display: block;
+    width: 18px;
+    height: 18px;
+
+    background-color: @font-second;
+    border: 1px solid @font-fourth;
+}
+
+.section-todo__input-task-checkbox:checked ~ .section-todo__label{
+    background-color: #000;
+}
+
+.section-todo__input-task-checkbox:checked ~ .section-todo__label--add{
+    background-color: transparent;
+}
+
+.section-todo__input-task-text{
+    background-color: transparent;
+    width: 100%;
+    margin-left: 27px;
+    border: none;
+
+    font-family: 'OpenSans-regular';
+    .font(20px, 24px);
+}
+
+.section-todo__input-task-text::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+}
+
+.section-todo__input-title::placeholder,
+.section-todo__input-task-text::placeholder{
+    color: @font-main;
+}
+
+
+
+.section-todo__element--add{
+    background-color: @font-fifth;
+    border: 1px solid @font-fourth;
+
+    position: relative;
+}
+
+.section-todo__input-task-checkbox--add{
+    display: none;
+}
+
+.section-todo__input-task-text--add{
+    margin-left: 27px;
+    color: @font-second;
+}
+
+.section-todo__input-task-text--add::placeholder{
+    color: @font-second;
+}
+
+.section-todo__label--add{
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    display: block;
+    background-color: transparent;
+    border: none;
+    width: 17px;
+    height: 17px;
+}
+
+.section-todo__label--add::before,
+.section-todo__label--add::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 17px;
+    background-color: @font-third;
+    border: 1px solid @font-fourth;
+}
+
+.section-todo__label--add::after{
+    transform: rotate(90deg);
+}
+
+
+
+.section-todo__button{
+    display: block;
+    position: absolute;
+    width: 90px;
+    top: 0;
+    right: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background-color: @font-third;
+    border: 1px solid @font-fourth;
+    font-family: 'OpenSans-bold';
+    .font(22px, 24px);
+}
+
+
+
+
+
+
