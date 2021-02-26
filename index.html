@@ -10,29 +10,31 @@
 <body>
     <section class="section-todo">
         <div class="section-todo__block">
-            <div class="section-todo__container-input">
-                <input class="section-todo__input-title" type="text" placeholder="Title">
+            <div class="section-todo__container-tittle section-todo__element">
+                <button class="section-todo__tittle-button section-todo__button-add">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7.5" cy="7.5" r="7" stroke="#777480"/>
+                        <rect x="7" y="3" width="1" height="9" rx="0.5" fill="#777480"/>
+                        <rect x="3" y="7" width="9" height="1" rx="0.5" fill="#777480"/>
+                    </svg>
+                </button>
+                <input class="section-todo__input-title" type="text" placeholder="Some task">
             </div>
             <div class="section-todo__container-inputs">
                 <div class="section-todo__element">
-                    <input class="section-todo__input-task-checkbox" type="checkbox" id="checkbox">
-                    <input class="section-todo__input-task-text" type="text" placeholder="Task 1">
-                    <label class="section-todo__label" for="checkbox"></label>
+                    <button class="section-todo__input-task-checkbox"></button>
+                    <input class="section-todo__input-task-text" type="text" placeholder="Some task">
+                    <button class="section-todo__input-task-delete"></button>
                 </div>
                 <div class="section-todo__element">
-                    <input class="section-todo__input-task-checkbox" type="checkbox" id="checkbox-1">
-                    <input class="section-todo__input-task-text" type="text" placeholder="Task 1">
-                    <label class="section-todo__label" for="checkbox-1"></label>
+                    <button class="section-todo__input-task-checkbox"></button>
+                    <input class="section-todo__input-task-text" type="text" placeholder="Some task">
+                    <button class="section-todo__input-task-delete"></button>
                 </div>
                 <div class="section-todo__element">
-                    <input class="section-todo__input-task-checkbox" type="checkbox" id="checkbox-2">
-                    <input class="section-todo__input-task-text" type="text" placeholder="Task 1">
-                    <label class="section-todo__label" for="checkbox-2"></label>
-                </div>
-                <div class="section-todo__element section-todo__element--add">
-                    <input class="section-todo__input-task-checkbox section-todo__input-task-checkbox--add" type="checkbox" id="checkbox--add">
-                    <input class="section-todo__input-task-text section-todo__input-task-text--add" type="text" placeholder="New Task">
-                    <label class="section-todo__label section-todo__label--add" for="checkbox--add"></label>
+                    <button class="section-todo__input-task-checkbox"></button>
+                    <input class="section-todo__input-task-text" type="text" placeholder="Some task">
+                    <button class="section-todo__input-task-delete"></button>
                 </div>
             </div>
             <button class="section-todo__button">Publish</button>
@@ -42,42 +44,11 @@
 
             <div class="section-todo__panel" name = "rec_panel"></div>
         </div>
-
-    <script>
-    var acc = document.getElementsByName("fold_rec");
-    var i;
-
-    var folded = false;
-
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-
-        this.innerHTML = folded ? "Показать ссылки" : "Скрыть ссылки";
-
-        folded = !folded;
-
-        var panels = document.getElementsByName("rec_panel");
-
-        for (i = 0; i <script panels.length; i++) {
-
-        if (panels[i].style.maxHeight) {
-          panels[i].style.maxHeight = null;
-          panels[i].style.marginBottom = null;
-          panels[i].style.marginTop = null;
-          panels[i].style.opacity = null;
-
-        } else {
-          panels[i].style.maxHeight = (panels[i].scrollHeight*3) + "px";
-          panels[i].style.marginBottom = 0 + "em";
-          panels[i].style.marginTop = 0.1 + "em";
-          panels[i].style.opacity = "inherit";
-        } 
-      }
-      });
-    }
-    </script>
     </section>
 </body>
 </html>
+
+
+
+
+    
