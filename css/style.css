@@ -1,14 +1,6 @@
 @font-face {
-  font-family: 'OpenSans-bold';
-  src: local('OpenSans-bold'), url('/font/OpenSans-Bold.woff2') format('woff2'), url('/font/OpenSans-Bold.woff') format('woff');
-}
-@font-face {
-  font-family: 'OpenSans-regular';
-  src: local('OpenSans-regular'), url('/font/OpenSans-Regular.woff2') format('woff2'), url('/font/OpenSans-Regular.woff') format('woff');
-}
-@font-face {
-  font-family: 'OpenSans-light';
-  src: local('OpenSans-light'), url('/font/OpenSans-Light.woff2') format('woff2'), url('/font/OpenSans-Light.woff') format('woff');
+  font-family: 'Manrope';
+  src: local('Manrope'), url('/font/Manrope-Regular.woff2') format('woff2'), url('/font/Manrope-Regular.woff') format('woff');
 }
 * {
   box-sizing: border-box;
@@ -30,11 +22,19 @@ body {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 100px;
+  padding: 0 90px;
 }
 .section-todo__block {
-  max-width: 1000px;
+  max-width: 1020px;
   width: 100%;
   margin: 0 auto;
-  position: relative;
+}
+.section-todo__element {
+  width: 100%;
+  border: none;
+  border: 1px solid #a29eac;
+}
+.section-todo__button {
+  font-family: 'Manrope';
+  font-size: 20px;
 }
